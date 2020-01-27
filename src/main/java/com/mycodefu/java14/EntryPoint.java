@@ -26,10 +26,17 @@ public class EntryPoint {
                 new Hippo("Mr Collins", 2, 10, 0.5f)
         );
 
-        System.out.println(String.format("Welcome to Java 14!\n"
-                + "Here are your Bison!\n%s\n"
-                + "Here are your Hippos!\n%s\n"
-                + "Here are your Elephants!\n%s"
+
+        System.out.println(String.format("""
+                Welcome to Java 14!
+
+                Here are your Bison!
+                    %s
+                Here are your Hippos!
+                    %s
+                Here are your Elephants!
+                    %s
+                """
                 , bison, hippos, elephants
         ));
 
