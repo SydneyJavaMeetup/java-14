@@ -12,6 +12,12 @@ import java.util.stream.IntStream;
 public class EntryPoint {
 
     public static void main(String[] args) {
+        String animals = createAnimalsText();
+        System.out.println(animals);
+
+    }
+
+    public static String createAnimalsText() {
         List<Elephant> elephants = IntStream.rangeClosed(1, 1000).boxed()
                 .map(i -> Elephant.random())
                 .collect(Collectors.toList());
@@ -27,19 +33,18 @@ public class EntryPoint {
         );
 
 
-        System.out.println(String.format("""
-                Welcome to Java 14!
+        return String.format("""
+                        Welcome to Java 14!
 
-                Here are your Bison!
-                    %s
-                Here are your Hippos!
-                    %s
-                Here are your Elephants!
-                    %s
-                """
+                        Here are your Bison!
+                            %s
+                        Here are your Hippos!
+                            %s
+                        Here are your Elephants!
+                            %s
+                        """
                 , bison, hippos, elephants
-        ));
-
+        );
     }
 
 }
